@@ -1,3 +1,194 @@
 @import "~bootstrap/scss/bootstrap";
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+// css header
+header{
+    min-height: 100px;
+    padding: 0 4%;
+
+    .logo{
+        width: 100px;
+        height: 100%;
+        padding: 10px;
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .header-menu{
+        display: flex;
+
+        div{
+            height: 100%;
+            display: flex;
+            margin: 0 8px;
+            align-items: center;
+            font-weight: bold;
+            font-size: 0.6em;
+        }
+    }
+}
+
+// css main
+
+.window{
+    height: 300px;
+    background-image: url('../img/jumbotron.jpg');
+    background-size: cover;
+    img{
+        width: 100px;
+        height: 120px;
+    }
+}
+
+
+.content {
+
+    min-height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10%;
+    background-color: rgb(28, 28, 28);
+    position: relative;
+    .current-block{
+        position: absolute;
+        z-index: 1;
+        background-color: rgb(2, 130, 249);
+        margin-left: 4%;
+        top: -5%;
+        padding: 5px;
+        color: white;
+    }
+
+    h2 {
+        color: white;
+    }
+    .content-series{
+        width: calc(100% / 6);
+        padding: 20px;
+
+        .series{
+            width: 100px;
+            height: 120px;
+            img{
+                width: 100px;
+                height: 120px;
+            }
+        }
+        span{
+            color: white;
+            font-size: 0.9em;
+        }
+    }
+}
+
+
+// scss footer
+.shop {
+    padding: 0 5%;
+    display: flex;
+    background-color: rgb(2, 130, 249);
+    height: 120px;
+
+    div {
+        width: calc(100% / 5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        div {
+            width: 40px;
+            margin-right: 5px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        h3 {
+            color: white;
+            font-size: 0.7em;
+            font-weight: 400;
+        }
+    }
+}
+footer{
+    height: calc(100vh - 320px);
+
+    .dc-block,.sign-up{
+        padding: 0 8%;
+    }
+    .dc-block{
+        height: 75%;
+        background-image: url('../img/footer-bg.jpg');
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .dc-lists{
+            display: flex;
+
+            div{
+                display: flex;
+                flex-direction: column;
+                margin: 0 10px;
+                color: white;
+
+                h3{
+                    font-size: 0.9em;
+                    margin: 5px 0;
+                }
+                span{
+                    font-size: 0.77em;
+                    color: rgb(128, 129, 130);
+                }
+            }
+        }
+
+        .big-logo{
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            .cont-logo{
+                height: 115%;
+                background-image: url('../img/dc-logo-bg.png');
+                width: 40%;
+            }
+        }
+    }
+
+    .sign-up{
+        background-color: rgb(48, 48, 48);
+        height: 25%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .sign-block{
+            color: white;
+            border: 2px solid rgb(2, 130, 249);
+            height: 50px;
+            padding: 10px;
+        }
+
+        .social-network{
+            display: flex;
+
+            *{
+                margin: 0 3px;
+            }
+            h3{
+                color: rgb(2, 130, 249);
+            }
+        }
+    }
+}
